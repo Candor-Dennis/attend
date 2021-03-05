@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap files -->
+    <link rel="stylesheet" href="BOOTSTRAP/css/bootstrap.css">
+    <title>Sally's attendance</title>
+</head>
+<body class="bg-success container">
+
+    <!-- intro section -->
+    <div class="text-center text-light">
+        <h1 class="display-4  py-5">Sally's Attendance Sheet</h1>
+        <h5>Complete attendance....Make payment easier</h5>
+    </div>
+
+    <div class="mt-5">
+      <div class="card border-none shadow-lg py-5 p-5">
+          <div class="m-3">
+             <h4 class="py-4">For Staff</h4>
+         </div>
+          <form class="form-inline">
+                <div class=" mx-sm-3 mb-2">
+                  <label for="id" class="m-2"> Enter Id:</label>
+                  <input type="number"  class="form-control" id="staffId">
+                </div>
+                <div class="mx-sm-3 mb-2">
+                  <label for="staffDate" class="m-2">Enter Date:</label>
+                  <input type="date" class="form-control" id="staffDate" required>
+                </div>
+                    <button type="button" class="btn btn-outline-success ml-sm-5 mt-4" onclick="staffReg()">
+                        Sign In
+                    </button>
+            </form>
+       </div>
+       
+
+          <div>
+              <div class="text-center py-5">
+                    <button class="btn btn-light" onclick="payStaff()">
+                        Check Payment
+                    </button>
+                    <span class="text-white">(Check this every Friday)</span>
+              </div>
+              <div class="mt-5 py-5 d-none" id="paymentGateway">
+                  <form  class="form-inline">
+                        <div class="form-group">
+                            <div class="form-group mb-2">
+                                <label for="id" class="m-2 text-light"> Enter staff id to continue:</label>
+                                <input type="text"  class="form-control" id="newStaffId">
+                                <button class="btn btn-light m-5" type="button" onclick="makePayment()">Get Paid</button>
+                              </div>
+                        </div>
+                  </form>
+                  <div class="alert alert-danger d-none" id="danger">
+                    Try again later: You are a bad staff
+                  </div>
+                  <div class="alert alert-success d-none" id="success">
+                    Weldone for being punctual. Recieve payment
+                  </div>
+
+                  <div id="my-list"></div>
+              </dv>
+          </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="BOOTSTRAP/js/bootstrap.jquery.js"></script>
+    <script src="BOOTSTRAP/js/popper.js"></script>
+    <script src="BOOTSTRAP/js/bootstrap.js"></script>
+
+    <script src="js/index..js"></script>
+</body>
+</html>
